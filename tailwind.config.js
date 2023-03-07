@@ -17,10 +17,10 @@ module.exports = {
 
     extend: {
       colors: {
-        green: '5EB436',
-        blue: '381DDB',
-        skyBlue: '52B3D2',
-        grey: '222222',
+        green: '#5EB436',
+        blue: '#381DDB',
+        skyBlue: '#52B3D2',
+        grey: '#222222',
         current: 'currentColor',
       },
 
