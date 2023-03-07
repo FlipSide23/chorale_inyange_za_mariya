@@ -1,5 +1,6 @@
 import { useState } from "react";
 import MonthTile from "./MonthTile";
+import { masses } from "./data";
 
 export const Calendar = () => {
   const [selectedMonth, setSelectedMonth] = useState("march");
@@ -16,19 +17,19 @@ export const Calendar = () => {
             isSelected={selectedMonth === "march"}
             onSelect={() => handleSelect("march")}
             month="March"
-            mass="3 Masses"
+            mass={`${masses["march"].length} Masses`}
           />
           <MonthTile
             isSelected={selectedMonth === "april"}
             onSelect={() => handleSelect("april")}
             month="April"
-            mass="1 Mass"
+            mass={`${masses["april"].length} Masses`}
           />
           <MonthTile
             isSelected={selectedMonth === "may"}
             onSelect={() => handleSelect("may")}
             month="May"
-            mass="No Mass"
+            mass={`${masses["may"].length} Mass`}
           />
         </div>
         <table className="w-full bg-neutral-300 mt-12 table-fixed rounded-2xl">
@@ -40,33 +41,21 @@ export const Calendar = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td className="border border-white p-4 text-center text-neutral-500">
-                16 March 2023
-              </td>
-              <td className="border border-white p-4 text-center text-neutral-500">11:00 am</td>
-              <td className="border border-white p-4 text-center text-neutral-500">
-                Ecole Primaire La Gardienne
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-white p-4 text-center text-neutral-500">
-                16 March 2023
-              </td>
-              <td className="border border-white p-4 text-center text-neutral-500">11:00 am</td>
-              <td className="border border-white p-4 text-center text-neutral-500">
-                Ecole Primaire La Gardienne
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-white p-4 text-center text-neutral-500">
-                16 March 2023
-              </td>
-              <td className="border border-white p-4 text-center text-neutral-500">11:00 am</td>
-              <td className="border border-white p-4 text-center text-neutral-500">
-                Ecole Primaire La Gardienne
-              </td>
-            </tr>
+            {masses[selectedMonth].map((mass, index) => {
+              return (
+                <tr key={index}>
+                  <td className="border border-white p-4 text-center text-neutral-500">
+                    {mass.date}
+                  </td>
+                  <td className="border border-white p-4 text-center text-neutral-500">
+                    {mass.time}
+                  </td>
+                  <td className="border border-white p-4 text-center text-neutral-500">
+                    {mass.place}
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
