@@ -4,8 +4,8 @@ import logo from '../../../assets/images/Icons/logo.png';
 
 const Logo = () => {
   return (
-    <NavLink to="/" className="block py-1">
-      <img src={logo} alt="logo" className="h-[92px] w-[92px]" />
+    <NavLink to="/" className="block my-1">
+      <img src={logo} alt="logo" className="h-[92px] w-[92px] object-contain" />
     </NavLink>
   );
 };

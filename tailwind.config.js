@@ -21,12 +21,6 @@ module.exports = {
 
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
-
-      'small-pc': { max: '1108px' },
-      'big-tablet': { max: '992px' },
-      tablet: { max: '767px' },
-      phone: { max: '600px' },
-      'small-phone': { max: '320px' },
     },
 
     fontFamily: {

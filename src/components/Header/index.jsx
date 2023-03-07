@@ -17,7 +17,7 @@ const Header = () => {
           <span className="text-[#5EB436]">Inyange za Mariya</span>
         </h1>
 
-        <p className="mt-3 md:mt-4 text-white leading-relaxed max-w-2xl text-center">
+        <p className="mt-6 text-white leading-relaxed max-w-2xl text-center">
           If you ever feel distressed during your day, call upon our
           Lady, just say this simple prayer: 'Mary, Mother of Jesus,
           please be a mother to me now.' I must admit, this prayer has
@@ -29,7 +29,7 @@ const Header = () => {
             Join Us
           </button>
 
-          <div className="hidden md:block">
+          <div className="hidden md:flex flex-col items-center">
             <PlayLatestVideo size="4xl" />
           </div>
 
